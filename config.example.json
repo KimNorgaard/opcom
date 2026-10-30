@@ -1,0 +1,23 @@
+{
+  "scheme": "amber",
+  "fifo": "~/.config/opcom/notify",
+  "jira": { "url": "https://jira.example.com", "interval": "60s" },
+  "calendar": {
+    "refresh": "10m",
+    "warn": ["10m", "1m"],
+    "email": "you@example.com",
+    "calendars": [
+      { "name": "WORK", "gws": "primary" },
+      { "name": "HOME", "url": "https://calendar.google.com/calendar/ical/.../private-.../basic.ics", "refresh": "1h" }
+    ]
+  },
+  "github": {
+    "interval": "60s",
+    "repos": [
+      { "repo": "example-org/widget" },
+      { "org": "acme" },
+      { "repo": "acme/noisy-repo", "events": ["merged"] },
+      { "repo": "someorg/somerepo", "events": ["review_requested", "ci_failed", "mentioned"] }
+    ]
+  }
+}
